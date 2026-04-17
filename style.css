@@ -390,6 +390,7 @@ h3{font-size:1.2rem;color:var(--ink);}
   .visitor-badge{top:auto;bottom:90px;left:16px;}
   .skills-layout{grid-template-columns:1fr;}
 }
+<<<<<<< HEAD
 
 /* ═══ FOOTER VISITOR COUNTER ════════════════════════════ */
 .site-footer {
@@ -424,3 +425,5 @@ h3{font-size:1.2rem;color:var(--ink);}
   text-align: center;
 }
 .footer-counter-label { color: var(--muted); font-weight: 500; }
+=======
+>>>>>>> 795530a96c66e5e11308c32326ac397b37e2995f

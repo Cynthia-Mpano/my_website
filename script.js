@@ -60,8 +60,8 @@ const T={
     "experience.eyebrow":"Experience","experience.heading":"Timeline of growth, teaching, and product building.",
     "experience.klab.date":"2024","experience.klab.title":"Design & Web Development Trainee","experience.klab.place":"kLab Rwanda · Kigali",
     "experience.klab.text":"Completed an intensive one-month training at kLab Rwanda, one of Africa's leading tech innovation hubs. Built practical skills in Figma (UI/UX), HTML, CSS, and JavaScript on real collaborative projects.",
-    "experience.ta.date":"Jan – May 2024","experience.ta.title":"Teaching Assistant (TA)","experience.ta.place":"G.S Byumba Inyange / Inspire, Educate and Empower Rwanda",
-    "experience.ta.text":"Spent 5 months supporting students in mathematics and computer science at G.S Byumba Inyange. This role strengthened my leadership, communication, and ability to break down complex concepts clearly.",
+    "experience.ta.date":"2024 – Present","experience.ta.title":"Teaching Assistant (TA)","experience.ta.place":"G.S Byumba Inyange / Inspire, Educate and Empower Rwanda",
+    "experience.ta.text":"Supporting students in mathematics and computer science. This role strengthened my leadership, communication, and ability to break down complex concepts clearly.",
     "experience.dev.date":"Ongoing","experience.dev.title":"Full Stack Developer","experience.dev.place":"Independent Projects",
     "experience.dev.text":"Building websites and software solutions using HTML, CSS, JavaScript, Django, and C#. Focused on practical products that improve workflows and user experience.",
     "experience.edu.date":"2024 – Present","experience.edu.title":"Bachelor in Information Technology","experience.edu.place":"University of Rwanda",
@@ -96,7 +96,7 @@ const T={
     "experience.eyebrow":"Expérience","experience.heading":"Parcours de progression, d'enseignement et de création.",
     "experience.klab.date":"2024","experience.klab.title":"Stagiaire Design & Développement Web","experience.klab.place":"kLab Rwanda · Kigali",
     "experience.klab.text":"Formation intensive d'un mois à kLab Rwanda. Compétences acquises en Figma, HTML, CSS et JavaScript sur des projets réels.",
-    "experience.ta.date":"Jan – Mai 2024","experience.ta.title":"Assistante d'enseignement","experience.ta.place":"G.S Byumba Inyange / Inspire, Educate and Empower Rwanda",
+    "experience.ta.date":"2024 – Aujourd'hui","experience.ta.title":"Assistante d'enseignement","experience.ta.place":"G.S Byumba Inyange / Inspire, Educate and Empower Rwanda",
     "experience.ta.text":"Accompagnement des élèves en mathématiques et informatique. Rôle qui a renforcé mon leadership et ma communication.",
     "experience.dev.date":"En cours","experience.dev.title":"Développeuse Full Stack","experience.dev.place":"Projets indépendants",
     "experience.dev.text":"Développement de sites web et logiciels avec HTML, CSS, JavaScript, Django et C#.",
@@ -132,7 +132,7 @@ const T={
     "experience.eyebrow":"Uburambe","experience.heading":"Urugendo rwo gukura, kwigisha no kubaka.",
     "experience.klab.date":"2024","experience.klab.title":"Umunyeshuri wa Design & Web Dev","experience.klab.place":"kLab Rwanda · Kigali",
     "experience.klab.text":"Nakoranye amezi amwe muri kLab Rwanda nize Figma, HTML, CSS na JavaScript ku mishinga ya nyaw'imwe.",
-    "experience.ta.date":"Mutarama – Gicurasi 2024","experience.ta.title":"Umufasha mu kwigisha","experience.ta.place":"G.S Byumba Inyange / Inspire, Educate and Empower Rwanda",
+    "experience.ta.date":"2024 – Ubu","experience.ta.title":"Umufasha mu kwigisha","experience.ta.place":"G.S Byumba Inyange / Inspire, Educate and Empower Rwanda",
     "experience.ta.text":"Mfasha abanyeshuri mu mibare na computer science. Uru ruhare rukomeje kuntera leadership na communication.",
     "experience.dev.date":"Birakomeje","experience.dev.title":"Full Stack Developer","experience.dev.place":"Imishinga yigenga",
     "experience.dev.text":"Nubaka websites na software nkoresheje HTML, CSS, JavaScript, Django na C#.",
@@ -154,11 +154,11 @@ const T={
   }
 };
 function setLang(l){
-  const lang=T[l]?"l":l;
-  i18nEls.forEach(el=>{const v=T[l]?.[el.dataset.i18n];if(v)el.textContent=v;});
-  document.documentElement.lang=l;
-  langBtns.forEach(b=>b.classList.toggle("is-active",b.dataset.lang===l));
-  localStorage.setItem("imc-lang",l);
+  const lang = T[l] ? l : "en";
+  i18nEls.forEach(el=>{const v=T[lang]?.[el.dataset.i18n];if(v)el.textContent=v;});
+  document.documentElement.lang=lang;
+  langBtns.forEach(b=>b.classList.toggle("is-active",b.dataset.lang===lang));
+  localStorage.setItem("imc-lang",lang);
 }
 setLang(localStorage.getItem("imc-lang")||"en");
 langBtns.forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
